@@ -46,6 +46,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
             return (
               <div
                 className={styles.item}
+                // eslint-disable-next-line react/no-array-index-key
                 key={index.toString()}
                 onClick={onClick}
                 onKeyDown={() => {}}

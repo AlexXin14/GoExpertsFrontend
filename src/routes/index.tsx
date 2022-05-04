@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter, Route, Switch, Redirect,
+  HashRouter, Route, Switch, Redirect,
 } from 'react-router-dom';
 import PrivateRoute from './privateRoute';
 import {
@@ -10,7 +10,7 @@ import {
 } from '../pages';
 
 const Router = () => (
-  <BrowserRouter>
+  <HashRouter>
     <Switch>
       <Route exact path="/" component={HomePage} />
       <Redirect from="/home" to="/" />
@@ -26,7 +26,7 @@ const Router = () => (
       <PrivateRoute path="/profile" component={ProfilePage} />
       <Route component={NotFoundPage} />
     </Switch>
-  </BrowserRouter>
+  </HashRouter>
 );
 
 export default Router;
